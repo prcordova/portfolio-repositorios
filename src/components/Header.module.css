@@ -1,0 +1,17 @@
+header{
+    width: 100vw;
+    background-color: var(--primary);
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+
+}
+header img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50px;
+    background-color: transparent;
+}

@@ -1,0 +1,22 @@
+:root{
+    --bg : rgb(94, 174, 170);
+    --primary : rgb(73, 72, 72);
+    --secondary : rgb(214, 135, 245);
+    --aqua-300 : rgb(220, 241, 243);
+    --aqua-500 : rgb(164, 238, 245);
+    --aqua-700 : rgb(120, 234, 245);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font: 18px 'Helvetica neve', Arial, sans-serif;
+    color: #eeeef3;
+    background-color: var(--bg);
+    
+}
+
+
