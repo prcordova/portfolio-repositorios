@@ -5,6 +5,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid var(--purple);
     
 
 
@@ -14,4 +15,5 @@ header img{
     height: 5rem;
     border-radius: 50px;
     background-color: transparent;
+    border: 2px solid var(--purple);  
 }

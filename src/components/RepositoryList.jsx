@@ -1,30 +1,40 @@
-import React, { useEffect } from "react"
-import { useState } from "react"
+import React, { useEffect, useState } from "react"
+import { useSearchParams } from 'react-router-dom'
 import { RepositoryItem } from "./RepositoryItem"
 import '../styles/repositories.scss'
-
+import SearchBar from '../components/SearchBar/index'
 //https://api.github.com/user/prcordova/repos
 
-const repository = {
-    name: '',
-    description: 'Forms in React',
-    link: 'https://github.com/prcordova/FeedSystem',
-}
+
 
 export function RepositoryList() {
     const [repositories, setRepositories] = useState([]);
+    const [searchValue, setSearchValue] = useState('prcordova');
 
     useEffect(() => {
-        fetch('https://api.github.com/users/prcordova/repos')
+
+        fetch(`https://api.github.com/users/${searchValue}/repos`)
             .then(response => response.json())
             .then(data => setRepositories(data))
+        console.log(repositories)
+
     }, [])
 
+    function handleChangeSearchValue(event) {
+
+        setSearchValue(event)
+        console.log(event)
+
+    }
+    console.log(searchValue)
     return (
-        <section className="repository-list">
+        <section href="#" className="repository-list">
 
             <div>
-                <h1>Lista de Repositórios</h1>
+                <h1>Github Repositories</h1>
+                <SearchBar
+                    onChange={(e) => handleChangeSearchValue(e.target.value)}
+                />
                 <ul>
                     <div className="card">
                         {repositories.map(repository => {

@@ -1,0 +1,9 @@
+.coverLetter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+     
+    color: var(--purple);
+}

@@ -1,12 +1,12 @@
 footer{
     width: 100vw;
-    background-color: var(--blue-700);
+    background-color: var(--primary);
     height: 5rem;
     display: flex;
     color: var(--aqua);
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: center; 
 
 
 }
